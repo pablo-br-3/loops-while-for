@@ -12,12 +12,20 @@
 let n = parseFloat(prompt("Digite um número"))
 const tabuada = document.getElementById("tabuada")
  tabuadahtml = ""
+ if(n !=isNaN && n > 0){
 for(let i = 0;i<=100;i++){
    
     let resultado = n * i
 tabuadahtml += `<p>${n} X ${i} = ${resultado} </p>`
 }
 
+}
+else if(n== 0){
+    alert("Digite apenas números maiores que 0")
+}
+else{
+    alert("Número inválido")
+}
 tabuada.innerHTML = tabuadahtml
     </script>
 </body>
