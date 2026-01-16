@@ -9,33 +9,32 @@
     <h1>loop-jogar dados</h1>
     <div id="dados"></div>
     <script>
-
+let  dado1 =parseInt(Math.random()*6+1)
+let dado2 =parseInt(Math.random()*6+1)
 let x = 0
   const dados=document.getElementById("dados")
 let dadoshtml =""
-while(x<100){
-
- let  dado1 =parseInt(Math.random(6)*10)+1
-let dado2 =parseInt(Math.random(6)*10)+1
+while(dado1 !== dado2){
   x++
+  dado1 =parseInt(Math.random()*6+1)
+   dado2 =parseInt(Math.random()*6+1)
   dadoshtml +=  ` <p>Dado 1 : ${dado1}  Dado 2 : ${dado2} </p>
     ` 
-  if(dado1 > 6 || dado2 > 6){
-   continue
+ 
         
-   
-  
-}
-if(dado1 === dado2){
+   if(dado1 === dado2){
  dadoshtml +=     `<p>Os dados foram jogados ${x} vezes </p>
      <p>Dado 1 : ${dado1}  Dado 2 : ${dado2} </p>
     ` 
     break
 
    
+  
+}
+
 }
  
-}
+
  
  
   
