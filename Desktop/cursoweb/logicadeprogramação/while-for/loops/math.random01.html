@@ -11,7 +11,7 @@
     <script>
 let  dado1 =parseInt(Math.random()*6+1)
 let dado2 =parseInt(Math.random()*6+1)
-let x = 0
+let x = 1
   const dados=document.getElementById("dados")
 let dadoshtml =""
 while(dado1 !== dado2){
@@ -32,10 +32,29 @@ while(dado1 !== dado2){
   
 }
 
+
 }
  
-
+ dadoshtml += `<p>-----------------------------------------</p>`
  
+   x = 1
+   do{
+ x++
+  dadoshtml +=  ` <p>Dado 1 : ${dado1}  Dado 2 : ${dado2} </p>
+    ` 
+  dado1 =parseInt(Math.random()*6+1)
+   dado2 =parseInt(Math.random()*6+1)
+   
+      if(dado1 === dado2){
+ dadoshtml +=     `<p>Os dados foram jogados ${x} vezes </p>
+     <p>Dado 1 : ${dado1}  Dado 2 : ${dado2} </p>
+    ` 
+    break
+
+   
+  
+}
+   }while(dado1 !== dado2)
  
   
   
